@@ -1,0 +1,12 @@
+# UFDR Forensic Analysis System - Minimal Requirements
+# Install these packages for basic functionality without warnings
+
+# Core dependencies (REQUIRED)
+Flask>=2.0.0
+pandas>=1.3.0
+rapidfuzz>=2.0.0
+orjson>=3.6.0
+
+# These are the ONLY packages needed for full functionality
+# All other packages are optional and will cause warnings if not installed
+

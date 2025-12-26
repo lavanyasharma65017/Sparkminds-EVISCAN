@@ -1,20 +1,8 @@
 # ============================================================================
-# EVI-SCAN - Complete Requirements File (Root)
+# EVI-SCAN - Complete Requirements File
 # ============================================================================
-# This file contains ALL dependencies needed for the complete EVI-SCAN system
-# including Forensic Analysis, Image Model, and Authentication modules.
-# 
-# Installation:
-#   pip install -r requirements.txt
-# 
-# For individual modules, see:
-#   - FORENSIC/requirements.txt (Forensic Analysis)
-#   - Image Model/EBI-scan-main/backend/requirements.txt (Image Model)
-#   - Authentication/requirements.txt (Authentication)
-# ============================================================================
-
-# ============================================================================
-# CORE FORENSIC ANALYSIS MODULE
+# This file contains ALL dependencies needed for EVI-SCAN to function.
+# Install with: pip install -r requirements.txt
 # ============================================================================
 
 # Core Web Framework (REQUIRED)
@@ -31,11 +19,14 @@ python-dateutil==2.8.2
 rapidfuzz==3.9.7
 
 # RAG Engine Dependencies (OPTIONAL - RAG is currently disabled)
+# These are kept for future use or if RAG is re-enabled
 faiss-cpu==1.8.0.post1
 sentence-transformers>=2.7.0
 huggingface_hub>=0.20.0
 
 # AI/ML Libraries (OPTIONAL - Required for AI Chat Assistant with LM Studio)
+# Note: transformers 4.35.2 is compatible with PyTorch 2.1+
+# If you upgrade to PyTorch 2.2+, you can use transformers 4.57.3
 transformers==4.35.2
 torch>=2.1.0
 torchvision>=0.16.0
@@ -64,38 +55,7 @@ bcrypt==4.0.1
 cryptography>=41.0.0
 langdetect==1.0.9
 
-# ============================================================================
-# IMAGE MODEL MODULE
-# ============================================================================
-
-# FastAPI Web Framework (Image Model)
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
-sqlalchemy==2.0.23
-psycopg2-binary==2.9.9
-pydantic==2.5.0
-pydantic-settings==2.1.0
-python-jose[cryptography]==3.3.0
-passlib[bcrypt]==1.7.4
-python-multipart==0.0.6
-
-# Image Processing (Image Model)
-opencv-python>=4.8.1.78
-deepface>=0.0.79
-tf-keras>=2.15.0
-ultralytics>=8.1.0
-
-# File Handling
-aiofiles>=23.2.1
-tqdm>=4.66.1
-
-# Build Tools
-setuptools>=68.0.0
-wheel>=0.41.0
-
-# ============================================================================
-# ADDITIONAL DEPENDENCIES
-# ============================================================================
+# Additional Dependencies
 # These are automatically installed as dependencies of the above packages
 # but listed here for completeness:
 # - typing-extensions (for Python < 3.9)
@@ -107,12 +67,16 @@ wheel>=0.41.0
 # - click (for Flask)
 # - itsdangerous (for Flask)
 # - blinker (for Flask signals)
+# - greenlet (for SQLAlchemy if used)
 # - filelock (for transformers)
 # - fsspec (for file systems)
 # - packaging (for version handling)
 # - pyyaml (for YAML parsing)
 # - safetensors (for model loading)
 # - regex (for text processing)
+# - tqdm (for progress bars)
 # - sympy (for PyTorch)
 # - networkx (for PyTorch)
 
+# Optional: Faster Hugging Face downloads
+# hf_xet>=1.2.0  # Uncomment if needed for faster model downloads
