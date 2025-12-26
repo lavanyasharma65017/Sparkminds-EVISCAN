@@ -1,0 +1,118 @@
+# ============================================================================
+# EVI-SCAN - Complete Requirements File (Root)
+# ============================================================================
+# This file contains ALL dependencies needed for the complete EVI-SCAN system
+# including Forensic Analysis, Image Model, and Authentication modules.
+# 
+# Installation:
+#   pip install -r requirements.txt
+# 
+# For individual modules, see:
+#   - FORENSIC/requirements.txt (Forensic Analysis)
+#   - Image Model/EBI-scan-main/backend/requirements.txt (Image Model)
+#   - Authentication/requirements.txt (Authentication)
+# ============================================================================
+
+# ============================================================================
+# CORE FORENSIC ANALYSIS MODULE
+# ============================================================================
+
+# Core Web Framework (REQUIRED)
+Flask==2.3.3
+Werkzeug==2.3.7
+Jinja2>=3.0.0
+
+# Data Processing (REQUIRED)
+pandas==2.1.3
+numpy==1.24.4
+python-dateutil==2.8.2
+
+# String Matching & Search (REQUIRED)
+rapidfuzz==3.9.7
+
+# RAG Engine Dependencies (OPTIONAL - RAG is currently disabled)
+faiss-cpu==1.8.0.post1
+sentence-transformers>=2.7.0
+huggingface_hub>=0.20.0
+
+# AI/ML Libraries (OPTIONAL - Required for AI Chat Assistant with LM Studio)
+transformers==4.35.2
+torch>=2.1.0
+torchvision>=0.16.0
+tokenizers>=0.14,<0.19
+accelerate==1.12.0
+bitsandbytes==0.41.3
+
+# Image Processing (REQUIRED)
+Pillow>=10.0.0
+
+# NLP Libraries (REQUIRED for enhanced query processing)
+nltk==3.8.1
+spacy==3.7.2
+scikit-learn==1.3.2
+
+# PDF Generation (REQUIRED)
+reportlab>=4.0.7
+
+# HTTP Requests (REQUIRED)
+requests==2.32.3
+
+# Authentication (REQUIRED)
+bcrypt==4.0.1
+
+# Security & Encryption (REQUIRED)
+cryptography>=41.0.0
+langdetect==1.0.9
+
+# ============================================================================
+# IMAGE MODEL MODULE
+# ============================================================================
+
+# FastAPI Web Framework (Image Model)
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# Image Processing (Image Model)
+opencv-python>=4.8.1.78
+deepface>=0.0.79
+tf-keras>=2.15.0
+ultralytics>=8.1.0
+
+# File Handling
+aiofiles>=23.2.1
+tqdm>=4.66.1
+
+# Build Tools
+setuptools>=68.0.0
+wheel>=0.41.0
+
+# ============================================================================
+# ADDITIONAL DEPENDENCIES
+# ============================================================================
+# These are automatically installed as dependencies of the above packages
+# but listed here for completeness:
+# - typing-extensions (for Python < 3.9)
+# - certifi (for SSL certificates)
+# - charset-normalizer (for requests)
+# - idna (for requests)
+# - urllib3 (for requests)
+# - MarkupSafe (for Jinja2)
+# - click (for Flask)
+# - itsdangerous (for Flask)
+# - blinker (for Flask signals)
+# - filelock (for transformers)
+# - fsspec (for file systems)
+# - packaging (for version handling)
+# - pyyaml (for YAML parsing)
+# - safetensors (for model loading)
+# - regex (for text processing)
+# - sympy (for PyTorch)
+# - networkx (for PyTorch)
+

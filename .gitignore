@@ -1,0 +1,130 @@
+# Python cache files (standard practice - regenerated automatically)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments (each developer creates their own)
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv
+
+# IDE files (personal preferences - can be removed if you want these tracked)
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+desktop.ini
+Thumbs.db
+
+# Environment variables (SECURITY: Keep this ignored - contains secrets!)
+# Only .env.example should be tracked
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+eggs/
+wheels/
+*.egg
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Documentation build outputs
+docs/_build/
+/site
+
+# Temporary Python files
+*.tmp
+*.temp
+*.bak
+
+# Database files (SECURITY: Contains user data and sessions)
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Large media files - Only exclude very large encrypted/compressed files
+# Note: Regular zip files and media can be included if needed
+*.encrypted
+# Exclude large zip files (>100MB) - GitHub limit
+# Keep small zip files but exclude large ones
+FORENSIC/data/UFDR/*.zip
+# Uncomment below if you want to exclude ALL archives
+# *.zip
+# *.rar
+# *.7z
+# *.tar
+# *.gz
+
+# Image files - Commented out to allow images to be tracked
+# Uncomment if you want to exclude images to reduce repo size
+# *.jpg
+# *.jpeg
+# *.png
+# *.gif
+# *.bmp
+# *.tiff
+# *.webp
+# *.ico
+
+# Video files - Commented out to allow videos to be tracked
+# Uncomment if you want to exclude videos (they're usually very large)
+# *.mp4
+# *.avi
+# *.mov
+# *.wmv
+# *.flv
+# *.mkv
+# *.webm
+
+# Audio files - Commented out to allow audio to be tracked
+# *.mp3
+# *.wav
+# *.ogg
+# *.flac
+# *.aac
+# *.m4a
+
+# Document files - Commented out to allow PDFs to be tracked
+# *.pdf
+
+# Model files (if you add ML models later - these are usually too large)
+# Uncomment if needed:
+# *.bin
+# *.pt
+# *.pth
+# *.h5
+# *.ckpt
+# models/
+# checkpoints/
+
+# NOTE: The following ARE tracked:
+# - JSON data files (UFDR structure files)
+# - All documentation files
+# - Configuration files (.env.example)
+# - Source code
+# - HTML templates
+# - Small static assets

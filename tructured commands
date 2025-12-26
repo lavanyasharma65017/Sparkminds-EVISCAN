@@ -1,0 +1,145 @@
+warning: in the working copy of 'FOLDER_STRUCTURE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'FORENSIC/PROJECT_STRUCTURE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'FORENSIC/scripts/test_comprehensive_web.bat', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'FORENSIC/tests/simple_example_queries.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'FORENSIC/tests/test_keyword_recognition.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'FORENSIC/web_interface.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'PROJECT_ANALYSIS.md', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/Authentication/evi_scan.db b/Authentication/evi_scan.db[m
+[1mindex 729f24a..82d795c 100644[m
+Binary files a/Authentication/evi_scan.db and b/Authentication/evi_scan.db differ
+[1mdiff --git a/FOLDER_STRUCTURE.md b/FOLDER_STRUCTURE.md[m
+[1mindex 96dd559..adeaf9b 100644[m
+[1m--- a/FOLDER_STRUCTURE.md[m
+[1m+++ b/FOLDER_STRUCTURE.md[m
+[36m@@ -25,7 +25,6 @@[m [mEVI-SCAN/[m
+ │   │[m
+ │   ├── 📁 core/                    # Core forensic engine[m
+ │   │   ├── __init__.py[m
+[31m-│   │   ├── ufdr_forensic_engine.py      # Main forensic engine[m
+ │   │   ├── ufdr_processor.py            # Data processor[m
+ │   │   ├── ufdr_file_handler.py         # File handling[m
+ │   │   ├── ufdr_forensic_command_engine.py  # Command processing[m
+[36m@@ -36,7 +35,6 @@[m [mEVI-SCAN/[m
+ │   │   ├── nl_query_engine.py           # Natural language queries[m
+ │   │   ├── enhanced_nl_query_engine.py  # Enhanced NL queries[m
+ │   │   ├── simplified_nl_query_engine.py # Simplified queries[m
+[31m-│   │   ├── comprehensive_nl_query_engine.py # Comprehensive queries[m
+ │   │   ├── ai_ufdr_retrieval_engine.py  # AI-powered retrieval[m
+ │   │   ├── rag_engine.py                # RAG (Retrieval-Augmented Generation)[m
+ │   │   └── smart_analyzer.py            # Smart analysis[m
+[36m@@ -50,7 +48,6 @@[m [mEVI-SCAN/[m
+ │   │   ├── index.html              # Main page[m
+ │   │   ├── enhanced_index.html     # Enhanced UI[m
+ │   │   ├── ai_index.html           # AI dashboard[m
+[31m-│   │   ├── advanced_mode.html      # Advanced mode[m
+ │   │   └── case_manager/           # Case management UI[m
+ │   │       ├── case_manager.html   # Main case manager page[m
+ │   │       └── *.md                # Case manager documentation[m
+[36m@@ -62,11 +59,15 @@[m [mEVI-SCAN/[m
+ │   │       └── mixkit-relaxing-bell-chime-3109.wav[m
+ │   │[m
+ │   ├── 📁 data/                    # Data storage[m
+[31m-│   │   ├── synthetic/              # Test/sample data[m
+[31m-│   │   │   ├── insider_data_leak_all.json[m
+[31m-│   │   │   ├── scam_network_all.json[m
+[31m-│   │   │   ├── sim_swap_attack_all.json[m
+[31m-│   │   │   └── Deepfake_Extortion_Case.json[m
+[32m+[m[32m│   │   ├── UFDR's(new)/            # Test/sample ZIP UFDR files[m
+[32m+[m[32m│   │   │   ├── case 1 Kidnapping Conspiracy.zip[m
+[32m+[m[32m│   │   │   ├── case 2 Human Trafficking.zip[m
+[32m+[m[32m│   │   │   ├── case 3 Cyber Fraud  Phishing.zip[m
+[32m+[m[32m│   │   │   ├── case 4 Illegal Surveillance.zip[m
+[32m+[m[32m│   │   │   ├── case 5 Domestic Violence Evidence.zip[m
+[32m+[m[32m│   │   │   ├── case 6 Smuggling Operations.zip[m
+[32m+[m[32m│   │   │   ├── HOMICIDE_UFDR.zip[m
+[32m+[m[32m│   │   │   └── UFDR_FILE.format.zip[m
+ │   │   ├── uploads/                # Temporary uploads (auto-cleaned)[m
+ │   │   └── uploaded_ufdrs/         # Processed user uploads[m
+ │   │[m
+[36m@@ -151,7 +152,7 @@[m [mOptional authentication UI (not required for basic use)[m
+ 2. **`FORENSIC/requirements.txt`** - List of all dependencies[m
+ [m
+ ### For Testing:[m
+[31m-1. **`FORENSIC/data/synthetic/`** - Test data files[m
+[32m+[m[32m1. **`FORENSIC/data/UFDR's(new)/`** - Test ZIP UFDR files[m
+ 2. **`FORENSIC/tests/`** - Test scripts[m
+ [m
+ ---[m
+[36m@@ -180,7 +181,7 @@[m [mResults shown in templates/[m
+ → `FORENSIC/data/uploaded_ufdrs/` (or use the web interface)[m
+ [m
+ ### "Where are the test files?"[m
+[31m-→ `FORENSIC/data/synthetic/`[m
+[32m+[m[32m→ `FORENSIC/data/UFDR's(new)/`[m
+ [m
+ ### "How do I start the application?"[m
+ → Run `FORENSIC/scripts/QUICK_START.bat` (Windows) or `QUICK_START.sh` (Mac/Linux)[m
+[36m@@ -199,7 +200,7 @@[m [mResults shown in templates/[m
+ ## 💡 Tips[m
+ [m
+ 1. **Don't modify files in `__pycache__/`** - These are auto-generated[m
+[31m-2. **Keep test data in `data/synthetic/`** - Don't delete these![m
+[32m+[m[32m2. **Keep test data in `data/UFDR's(new)/`** - ZIP UFDR test files[m
+ 3. **User uploads go to `data/uploaded_ufdrs/`** - These are your files[m
+ 4. **Scripts in `scripts/`** - Use these to start the app[m
+ 5. **Documentation in `docs/`** - Read these for help[m
+[36m@@ -215,7 +216,7 @@[m [mResults shown in templates/[m
+ 4. **New UI page?** → Add to `FORENSIC/templates/`[m
+ [m
+ ### Testing:[m
+[31m-1. Use files in `FORENSIC/data/synthetic/`[m
+[32m+[m[32m1. Use ZIP files in `FORENSIC/data/UFDR's(new)/`[m
+ 2. Run tests in `FORENSIC/tests/`[m
+ 3. Check logs in console output[m
+ [m
+[1mdiff --git a/FORENSIC/PROJECT_STRUCTURE.md b/FORENSIC/PROJECT_STRUCTURE.md[m
+[1mindex deb5850..cb8a4b2 100644[m
+[1m--- a/FORENSIC/PROJECT_STRUCTURE.md[m
+[1m+++ b/FORENSIC/PROJECT_STRUCTURE.md[m
+[36m@@ -13,7 +13,6 @@[m [mFORENSIC/[m
+ │[m
+ ├── core/                     # Core forensic engine modules[m
+ │   ├── __init__.py[m
+[31m-│   ├── ufdr_forensic_engine.py[m
+ │   ├── ufdr_processor.py[m
+ │   ├── ufdr_file_handler.py[m
+ │   ├── ufdr_forensic_command_engine.py[m
+[36m@@ -24,7 +23,6 @@[m [mFORENSIC/[m
+ │   ├── nl_query_engine.py[m
+ │   ├── enhanced_nl_query_engine.py[m
+ │   ├── simplified_nl_query_engine.py[m
+[31m-│   ├── comprehensive_nl_query_engine.py[m
+ │   ├── ai_ufdr_retrieval_engine.py[m
+ │   ├── rag_engine.py[m
+ │   └── smart_analyzer.py[m
+[36m@@ -38,7 +36,6 @@[m [mFORENSIC/[m
+ │   ├── index.html[m
+ │   ├── enhanced_index.html[m
+ │   ├── ai_index.html[m
+[31m-│   ├── advanced_mode.html[m
+ │   └── case_manager/        # Case management UI templates[m
+ │       ├── case_manager.html[m
+ │       └── *.md            # Case manager documentation[m
+[36m@@ -47,7 +44,7 @@[m [mFORENSIC/[m
+ │   └── chimes/              # Audio files[m
+ │[m
+ ├── data/                     # Data directories[m
+[31m-│   ├── synthetic/           # Test/synthetic UFDR data files[m
+[32m+[m[32m│   ├── UFDR's(new)/         # Test ZIP UFDR files[m
+ │   ├── uploads/             # Temporary upload directory[m
+ │   └── uploaded_ufdrs/      # Processed user uploads[m
+ │[m
+[36m@@ -74,7 +71,6 @@[m [mFORENSIC/[m
+ [m
+ ### From web_interface.py:[m
+ ```python[m
+[31m-from core.ufdr_forensic_engine import UFDRForensicEngine[m
+ from engines.nl_query_engine import NaturalLanguageUFDR[m
+ from engines.enhanced_nl_query_engine import EnhancedNaturalLanguageUFDR[m
+ from engines.ai_ufdr_retrieval_engine import AIUFDRRetrievalEngine[m
+[36m@@ -99,12 +95,11 @@[m [mfrom session_db import ([m
+ # Add parent directory to path[m
+ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))[m
+ [m
+[31m-from engines.comprehensive_nl_query_engine import ComprehensiveNLQuery
